@@ -1,0 +1,18 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+# OpenFeign超时控制
+# ribbon:
+  # ReadTimeout: 5000
+  # ConnectTimeout: 5000
+
+# feign日志
+# logging:
+  # level:
+    # com.pkz33.cloud.service.PaymentFeignService: debug
