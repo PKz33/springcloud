@@ -4,6 +4,7 @@ import com.pkz33.cloud.domain.CommonResult;
 import com.pkz33.cloud.domain.Order;
 import com.pkz33.cloud.service.OrderService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,5 +18,10 @@ public class OrderController {
     public CommonResult create(Order order){
         orderService.create(order);
         return new CommonResult(200,"order: create ok");
+    }
+
+    @RequestMapping("/snowflake")
+    public String index(){
+        return orderService.getIDBySnowflake();
     }
 }

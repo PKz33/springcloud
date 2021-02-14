@@ -4,4 +4,6 @@ import com.pkz33.cloud.domain.Order;
 
 public interface OrderService {
     void create(Order order);
+
+    String getIDBySnowflake();
 }
